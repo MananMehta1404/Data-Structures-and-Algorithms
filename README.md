@@ -4,3 +4,5 @@
 - Code is wriiten in Java language.
 - All the important data structures and its basic and important questions are solved here.
 - Try this repository as your learning module and you will become a master in DSA.
+
+`System.out.println("Let's become a Master in DSA");`
