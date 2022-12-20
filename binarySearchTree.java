@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class binarySearchTree {
 
     static class Node{
@@ -65,6 +67,7 @@ public class binarySearchTree {
         return root;
     }
 
+    // Function to delete the node with given value.
     public static Node deleteNode(Node root, int val){
         if(root.data > val) root.left = deleteNode(root.left, val);
         else if(root.data < val) root.right = deleteNode(root.right, val);
@@ -87,6 +90,42 @@ public class binarySearchTree {
         return root;
     }
 
+    // Function to print the nodes in the given range.
+    public static void printInRange(Node root, int x, int y){
+        if(root == null) return;
+        if(root.data < x) printInRange(root.right, x, y);
+        else if(root.data > y) printInRange(root.left, x, y);
+        
+        else if(root.data >= x && root.data <= y){
+            printInRange(root.left, x, y);
+            System.out.print(root.data + " ");
+            printInRange(root.right, x, y);
+        }
+    }
+
+    public static void printPath(ArrayList<Integer> path){
+        for(int i = 0; i < path.size(); i++){
+            System.out.print(path.get(i) + "->");
+        }
+        System.out.println();
+    }
+
+    // Function to print all paths between root and leaf nodes.
+    public static void printRootToLeaf(Node root, ArrayList<Integer> path){
+        if(root == null) return;
+
+        path.add(root.data);
+
+        // Leaf Node
+        if(root.left == null && root.right == null) printPath(path);
+        // Non-leaf Node
+        else{
+            printRootToLeaf(root.left, path);
+            printRootToLeaf(root.right, path);
+        }
+        path.remove(path.size() - 1);
+    }
+
     public static void main(String[] args) {
         int nodes[] = {8, 5, 3, 1, 4, 6, 10, 11, 14};
         Node root = null;
@@ -95,23 +134,27 @@ public class binarySearchTree {
             root = insert(root, nodes[i]);
         }
 
-        System.out.println("Root node is: " + root.data);
-        System.out.print("Inorder traversal is: ");
-        inOrder(root);
-        System.out.println();
+        // System.out.println("Root node is: " + root.data);
+        // System.out.print("Inorder traversal is: ");
+        // inOrder(root);
+        // System.out.println();
         // System.out.println(searchBST(root, 7));
 
-        deleteNode(root, 4);
-        System.out.print("Inorder traversal is: ");
-        inOrder(root);
-        System.out.println();
-        deleteNode(root, 11);
-        System.out.print("Inorder traversal is: ");
-        inOrder(root);
-        System.out.println();
-        deleteNode(root, 5);
-        System.out.print("Inorder traversal is: ");
-        inOrder(root);
+        // deleteNode(root, 4);
+        // System.out.print("Inorder traversal is: ");
+        // inOrder(root);
+        // System.out.println();
+        // deleteNode(root, 11);
+        // System.out.print("Inorder traversal is: ");
+        // inOrder(root);
+        // System.out.println();
+        // deleteNode(root, 5);
+        // System.out.print("Inorder traversal is: ");
+        // inOrder(root);
+        // System.out.println();
+        // printInRange(root, 4, 10);
+
+        printRootToLeaf(root, new ArrayList<>());
 
     }
     
