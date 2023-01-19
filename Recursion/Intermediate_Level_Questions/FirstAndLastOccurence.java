@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.Intermediate_Level_Questions;
 
 public class FirstAndLastOccurence {
     static int first = -1;

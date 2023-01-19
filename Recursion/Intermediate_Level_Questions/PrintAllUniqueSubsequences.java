@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.Intermediate_Level_Questions;
 import java.util.HashSet;
 
 public class PrintAllUniqueSubsequences {

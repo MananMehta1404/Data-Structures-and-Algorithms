@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.Intermediate_Level_Questions;
 
 public class PrintKeypadCombination {
     public static String[] keypad = {".", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tu", "vwx", "yz"};
