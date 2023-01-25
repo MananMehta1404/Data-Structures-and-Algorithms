@@ -1,3 +1,5 @@
+package Graph;
+
 public class DFSTraversal {
 
     static int visited[] = {0,0,0,0,0,0,0};
