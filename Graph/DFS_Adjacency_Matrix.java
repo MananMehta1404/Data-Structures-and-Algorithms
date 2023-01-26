@@ -1,6 +1,6 @@
 package Graph;
 
-public class DFSTraversal {
+public class DFS_Adjacency_Matrix {
 
     static int visited[] = {0,0,0,0,0,0,0};
     static int graph [][] = {

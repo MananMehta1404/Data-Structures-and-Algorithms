@@ -2,7 +2,7 @@ package Graph;
 
 import java.util.*;
 
-// Using Adjcency List
+// Creating a Graph using Adjcency List.
 public class BuildGraph {
     
     static class Edge{

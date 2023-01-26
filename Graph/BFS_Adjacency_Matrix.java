@@ -2,7 +2,7 @@ package Graph;
 
 import java.util.*;
 
-public class BFSTraversal {
+public class BFS_Adjacency_Matrix {
 
     public static void main(String[] args) {
         int[] visited = {0,0,0,0,0,0,0};
