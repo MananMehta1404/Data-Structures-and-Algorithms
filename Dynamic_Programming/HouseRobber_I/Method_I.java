@@ -1,6 +1,6 @@
-package Dynamic_Programming;
+package Dynamic_Programming.HouseRobber_I;
 
-public class HouseRobber_I {
+public class Method_I {
     // Memoization Method
     public static int rob(int[] nums, int idx, int[] dp) {
         if(idx == 0) return nums[0];
@@ -13,6 +13,7 @@ public class HouseRobber_I {
 
         return dp[idx] = Math.max(rob, notRob);
     }
+    
     public static void main(String[] args) {
         int[] nums = {2, 1, 6, 9};
         int n = nums.length;
