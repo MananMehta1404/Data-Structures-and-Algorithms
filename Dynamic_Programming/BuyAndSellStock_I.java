@@ -6,10 +6,11 @@ public class BuyAndSellStock_I {
     public static int maxProfit(int[] prices) {
         int min = prices[0];
         int profit = 0;
+
         for(int i = 0; i < prices.length; i++){
-            int temp = prices[i] - min;
-            if(min > prices[i]) min = prices[i];
-            if(profit < temp) profit = temp;
+            int temp_Profit = prices[i] - min;
+            profit = Math.max(profit, temp_Profit);
+            min = Math.min(min, prices[i]);
         }
 
         return profit;
