@@ -1,4 +1,4 @@
-package Dynamic_Programming;
+package Dynamic_Programming.Buy_And_Sell_Stocks;
 
 public class BuyAndSellStock_I {
 
