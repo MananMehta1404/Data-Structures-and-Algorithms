@@ -17,6 +17,7 @@ public class BuyAndSellStock_I {
     }
 
     public static void main(String[] args) {
+        // Single Transaction is allowed.
         int[] prices = {7, 1, 5, 3, 6, 4};
         System.out.println("Maximum profit is: " + maxProfit(prices));
     }

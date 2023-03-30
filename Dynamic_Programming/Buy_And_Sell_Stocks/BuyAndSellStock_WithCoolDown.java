@@ -1,7 +1,7 @@
 package Dynamic_Programming.Buy_And_Sell_Stocks;
 
 public class BuyAndSellStock_WithCoolDown {
-    // Memoization Code
+    // Memoization Code  
     public static int max_Profit(int[] prices, int idx, int buy, int[][] dp){
         if(idx >= prices.length) return 0;
 
@@ -24,6 +24,7 @@ public class BuyAndSellStock_WithCoolDown {
     }
 
     public static void main(String[] args) {
+        // There is a cooldown of 1 day after you sell a stock i.e you cannot buy a stock on the next day after you sell a stock.
         int[] prices = {1, 2, 3, 0, 2};
 
         int[][] dp = new int[prices.length][2];
