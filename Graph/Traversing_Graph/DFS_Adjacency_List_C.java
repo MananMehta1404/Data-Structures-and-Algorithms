@@ -1,10 +1,10 @@
-package Graph;
+package Graph.Traversing_Graph;
 
 import java.util.*;
 
-// BFS for connected graph using Adjacency List. 
+// DFS for connected graph using Adjacency List. 
 // Time Complexity -> O(V + E) where V -> No. of Vertices and E -> No. of edges.
-public class BFS_Adjacency_List_C{
+public class DFS_Adjacency_List_C {
 
     static class Edge{
         int src;
@@ -45,22 +45,13 @@ public class BFS_Adjacency_List_C{
         graph[6].add(new Edge(6, 5));
     }
 
-    public static void bfs(ArrayList<Edge> graph[]){
-        Queue<Integer> q = new LinkedList<>();
-        boolean visited[] = new boolean[graph.length];
-        q.add(0);
+    public static void dfs(ArrayList<Edge> graph[], int curr, boolean visited[]){
+        System.out.print(curr + " ");
+        visited[curr] = true;
 
-        while(!q.isEmpty()){
-            int curr = q.remove();
-            if(visited[curr] == false){
-                System.out.print(curr + " ");
-                visited[curr] = true;
-
-                for(int i = 0; i < graph[curr].size(); i++){
-                    Edge e = graph[curr].get(i);
-                    q.add(e.des);
-                }
-            }
+        for(int i = 0; i < graph[curr].size(); i++){
+            Edge e = graph[curr].get(i);
+            if(visited[e.des] == false) dfs(graph, e.des, visited);
         }
     }
 
@@ -80,7 +71,8 @@ public class BFS_Adjacency_List_C{
          
         */
 
-        bfs(graph);
+        boolean[] visited = new boolean[V];
+        dfs(graph, 0, visited);
         System.out.println();
     }
 }

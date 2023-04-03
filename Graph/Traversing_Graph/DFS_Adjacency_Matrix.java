@@ -1,4 +1,4 @@
-package Graph;
+package Graph.Traversing_Graph;
 
 public class DFS_Adjacency_Matrix {
 
