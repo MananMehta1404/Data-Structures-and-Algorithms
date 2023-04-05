@@ -2,6 +2,7 @@ package Arrays;
 
 public class Island_Peri {
 
+    // Each block will have 4 sides. We will return the number of sides with water touching it by counting the number of lands and then subtracting it from 4.
     public static int findWater(int row, int col, int[][] grid, int[] delRow, int[] delCol){
         int land = 0;
         int n = grid.length;
@@ -37,6 +38,6 @@ public class Island_Peri {
             }
         }
 
-        System.out.println("The perimeter of the island is: " + ans + " units");
+        System.out.println("The perimeter of the island is: " + ans);
     }
 }
