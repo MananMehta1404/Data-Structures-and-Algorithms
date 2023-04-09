@@ -43,7 +43,7 @@ public class Undirected_BFS {
         }
     }
 
-    public static boolean detectCycle(List<List<Edge>> graph, int src, boolean[] visited){
+    public static boolean detectCycle_BFS(List<List<Edge>> graph, int src, boolean[] visited){
         Queue<Pair> queue = new LinkedList<>();
         queue.add(new Pair(src, -1));
         visited[src] = true;
@@ -70,25 +70,24 @@ public class Undirected_BFS {
 
     public static void main(String[] args) {
         int n = 9;
-        int[][] edges = {{0, 1}, {1, 2}, {0, 3}, {4, 5}, {5, 6}, {6, 4}, {7, 8}};
+        int[][] edges = {{0, 1}, {1, 2}, {0, 3}, {2, 3}, {4, 5}, {5, 6}, {6, 4}, {7, 8}};
 
         List<List<Edge>> graph = createGraph(n, edges);
 
         // Graph with Disconnected Components 
         /*
               1 -- 2     
-             /           4 - 5     7 -- 8
-            0             \ /
-             \             6
+             /    /        4 - 5     7 -- 8
+            0    /          \ /
+             \  /            6
               3
         */
 
         boolean[] visited = new boolean[n];
         for(int i = 0; i < n; i++){
             if(!visited[i]){
-                if(detectCycle(graph, i, visited)){
+                if(detectCycle_BFS(graph, i, visited)){
                     System.out.println("Cycle is present at node " + i + ".");
-                    break;
                 }
             }
         }
