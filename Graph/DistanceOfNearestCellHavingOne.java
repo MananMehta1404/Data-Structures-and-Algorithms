@@ -2,6 +2,8 @@ package Graph;
 
 import java.util.*;
 
+// Time Complexity: O(n*m) where n is the number of rows and m is the number of columns
+// Space Complexity: O(n*m) where n is the number of rows and m is the number of columns
 public class DistanceOfNearestCellHavingOne {
 
     // Node class to store the row, column and steps
