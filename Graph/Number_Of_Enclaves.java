@@ -21,7 +21,7 @@ public class Number_Of_Enclaves {
     }
 
     public static void main(String[] args) {
-        int[][] grid = {{0,0,0,0},{1,0,1,0},{0,1,1,0},{0,0,0,0}};
+        int[][] grid = {{0,1,1,0},{0,0,1,0},{0,0,1,0},{0,0,0,0}};
 
         int n = grid.length;
         int m = grid[0].length;
@@ -47,7 +47,7 @@ public class Number_Of_Enclaves {
         int[] delCol = {0, 1, 0, -1};
 
         // BFS
-        while(q.isEmpty()){
+        while(!q.isEmpty()){
             int row = q.peek().first;
             int col = q.peek().second;
             q.remove();
