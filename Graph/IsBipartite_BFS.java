@@ -19,6 +19,7 @@ public class IsBipartite_BFS {
         return graph;
     }
 
+    // BFS
     public static boolean check(int start, int[][] graph, int[] color) {
         Queue<Integer> queue = new LinkedList<>();
         queue.add(start);
@@ -29,7 +30,9 @@ public class IsBipartite_BFS {
             queue.remove();
 
             for (int i = 0; i < graph[node].length; i++) {
-                int neighbour = graph[node][i];
+                if(graph[node][i] == 0) continue;
+
+                int neighbour = i;
 
                 // If the neighbour is not coloured, then colour it with the opposite color of the node.
                 if (color[neighbour] == -1) {

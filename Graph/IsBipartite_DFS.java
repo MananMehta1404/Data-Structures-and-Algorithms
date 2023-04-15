@@ -19,9 +19,12 @@ public class IsBipartite_DFS {
         return graph;
     }
 
+    // DFS
     public static boolean check(int start, int[][] graph, int[] color) {
         for (int i = 0; i < graph[start].length; i++) {
-            int neighbour = graph[start][i];
+            if(graph[start][i] == 0) continue;
+            
+            int neighbour = i;
 
             // If the neighbour is not coloured, then colour it with the opposite color of the node.
             if (color[neighbour] == -1) {
