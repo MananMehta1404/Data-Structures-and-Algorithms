@@ -1,4 +1,4 @@
-package Graph;
+package Graph.Bipartite_Graph;
 
 import java.util.*;
 
