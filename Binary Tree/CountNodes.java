@@ -1,6 +1,3 @@
-package Binary_Tree;
-
-
 public class CountNodes {
 
     // Class to define the node structure of a binary tree

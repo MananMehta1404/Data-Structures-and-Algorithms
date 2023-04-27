@@ -1,5 +1,3 @@
-package Binary_Tree.BinaryTree_Traversal;
-
 public class Postorder {
 
     // Class to define the node structure of a binary tree

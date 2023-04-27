@@ -1,5 +1,3 @@
-package Binary_Tree.BinaryTree_Traversal;
-
 import java.util.*;
 
 public class Levelorder {

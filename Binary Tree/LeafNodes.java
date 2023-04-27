@@ -1,5 +1,3 @@
-package Binary_Tree;
-
 import java.util.*;
 
 public class LeafNodes {

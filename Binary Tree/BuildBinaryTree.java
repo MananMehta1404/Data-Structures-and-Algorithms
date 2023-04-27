@@ -1,5 +1,3 @@
-package Binary_Tree;
-
 public class BuildBinaryTree{
 
     // Class to define the node structure of a binary tree
