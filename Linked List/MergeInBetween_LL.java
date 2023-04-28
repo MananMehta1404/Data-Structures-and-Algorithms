@@ -1,5 +1,3 @@
-package Linked_List;
-
 import java.util.*;
 
 public class MergeInBetween_LL {
