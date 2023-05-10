@@ -1,5 +1,3 @@
-package Dynamic_Programming;
-
 public class HouseRobber_II {
 
     public static int rob(int[] nums) {

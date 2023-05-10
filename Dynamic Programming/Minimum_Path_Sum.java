@@ -1,5 +1,3 @@
-package Dynamic_Programming;
-
 public class Minimum_Path_Sum {
 
     // Memoization Code
