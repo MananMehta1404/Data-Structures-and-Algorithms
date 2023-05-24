@@ -1,5 +1,3 @@
-package Trie;
-
 public class WordBreak {
 
     static class Node{

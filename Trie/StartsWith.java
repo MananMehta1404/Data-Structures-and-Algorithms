@@ -1,5 +1,3 @@
-package Trie;
-
 public class StartsWith {
 
     static class Node{

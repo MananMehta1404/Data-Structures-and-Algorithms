@@ -1,5 +1,3 @@
-package Trie;
-
 public class LongestWordWithAllPrefix {
 
     static class Node{

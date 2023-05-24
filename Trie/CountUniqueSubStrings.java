@@ -1,5 +1,3 @@
-package Trie;
-
 public class CountUniqueSubStrings {
 
     static class Node{

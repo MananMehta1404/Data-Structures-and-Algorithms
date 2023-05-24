@@ -1,5 +1,3 @@
-package Trie;
-
 public class BuildTrie {
 
     static class Node{
