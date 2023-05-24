@@ -1,5 +1,3 @@
-package Arrays.Spiral_Matrix;
-
 public class SpiralMatrix_II {
 
     // Time Complexity: O(n*m)

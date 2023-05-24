@@ -1,5 +1,3 @@
-package Arrays.Spiral_Matrix;
-
 import java.util.*;
 
 public class SpiralMatrix_I {

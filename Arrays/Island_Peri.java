@@ -1,5 +1,3 @@
-package Arrays;
-
 public class Island_Peri {
 
     // Each block will have 4 sides. We will return the number of sides with water touching it by counting the number of lands and then subtracting it from 4.
