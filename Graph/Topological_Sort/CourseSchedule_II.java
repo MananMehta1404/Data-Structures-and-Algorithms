@@ -1,20 +1,10 @@
 import java.util.*;
 
 public class CourseSchedule_II {
-    // Creating a Edge class to store the source, destination.
-    static class Edge{
-        int src;
-        int des;
 
-        Edge(int s, int d){
-            this.src = s;
-            this.des = d;
-        }
-    }
+    public static List<List<Integer>> createGraph(int n, int[][] edges){
 
-    public static List<List<Edge>> createGraph(int n, int[][] edges){
-
-        List<List<Edge>> graph = new ArrayList<>();
+        List<List<Integer>> graph = new ArrayList<>();
         for(int i = 0; i < n; i++){
             graph.add(new ArrayList<>());
         }
@@ -23,7 +13,7 @@ public class CourseSchedule_II {
             int src = edges[i][1];
             int des = edges[i][0];
 
-            graph.get(src).add(new Edge(src, des));
+            graph.get(src).add(des);
         }
 
         return graph;
@@ -34,12 +24,12 @@ public class CourseSchedule_II {
         int[][] prerequisites = {{3, 1}, {2, 3}, {4, 1}, {4, 0}, {5, 2}, {5, 0}, {1, 2}};
         
         int n = numCourses;
-        List<List<Edge>> graph = createGraph(n, prerequisites);
+        List<List<Integer>> graph = createGraph(n, prerequisites);
 
         int[] indegree = new int[n];
         for(int i = 0; i < n; i++){
-            for(Edge e : graph.get(i)){
-                indegree[e.des]++;
+            for(int node : graph.get(i)){
+                indegree[node]++;
             }
         }
 
@@ -56,10 +46,10 @@ public class CourseSchedule_II {
             int node = queue.poll();
             topo[idx++] = node;
 
-            for(Edge e : graph.get(node)){
-                indegree[e.des]--;
-                if(indegree[e.des] == 0){
-                    queue.add(e.des);
+            for(int des : graph.get(node)){
+                indegree[des]--;
+                if(indegree[des] == 0){
+                    queue.add(des);
                 }
             }
         }
