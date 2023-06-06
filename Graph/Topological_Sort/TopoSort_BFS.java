@@ -2,20 +2,9 @@ import java.util.*;
 
 public class TopoSort_BFS {
 
-    // Creating a Edge class to store the source, destination.
-    static class Edge{
-        int src;
-        int des;
+    public static List<List<Integer>> createGraph(int n, int[][] edges){
 
-        Edge(int s, int d){
-            this.src = s;
-            this.des = d;
-        }
-    }
-
-    public static List<List<Edge>> createGraph(int n, int[][] edges){
-
-        List<List<Edge>> graph = new ArrayList<>();
+        List<List<Integer>> graph = new ArrayList<>();
         for(int i = 0; i < n; i++){
             graph.add(new ArrayList<>());
         }
@@ -24,7 +13,7 @@ public class TopoSort_BFS {
             int src = edges[i][0];
             int des = edges[i][1];
 
-            graph.get(src).add(new Edge(src, des));
+            graph.get(src).add(des);
         }
 
         return graph;
@@ -34,12 +23,12 @@ public class TopoSort_BFS {
         int n = 6;
         int[][] edges = {{3, 1}, {2, 3}, {4, 1}, {4, 0}, {5, 2}, {5, 0}};
 
-        List<List<Edge>> graph = createGraph(n, edges);
+        List<List<Integer>> graph = createGraph(n, edges);
 
         int[] indegree = new int[n];
         for(int i = 0; i < n; i++){
-            for(Edge e : graph.get(i)){
-                indegree[e.des]++;
+            for(int node : graph.get(i)){
+                indegree[node]++;
             }
         }
 
@@ -55,10 +44,10 @@ public class TopoSort_BFS {
             int node = queue.poll();
             result.add(node);
 
-            for(Edge e : graph.get(node)){
-                indegree[e.des]--;
-                if(indegree[e.des] == 0){
-                    queue.add(e.des);
+            for(int des : graph.get(node)){
+                indegree[des]--;
+                if(indegree[des] == 0){
+                    queue.add(des);
                 }
             }
         }

@@ -2,20 +2,9 @@ import java.util.*;
 
 public class TopoSort_DFS {
 
-    // Creating a Edge class to store the source, destination.
-    static class Edge{
-        int src;
-        int des;
+    public static List<List<Integer>> createGraph(int n, int[][] edges){
 
-        Edge(int s, int d){
-            this.src = s;
-            this.des = d;
-        }
-    }
-
-    public static List<List<Edge>> createGraph(int n, int[][] edges){
-
-        List<List<Edge>> graph = new ArrayList<>();
+        List<List<Integer>> graph = new ArrayList<>();
         for(int i = 0; i < n; i++){
             graph.add(new ArrayList<>());
         }
@@ -24,18 +13,18 @@ public class TopoSort_DFS {
             int src = edges[i][0];
             int des = edges[i][1];
 
-            graph.get(src).add(new Edge(src, des));
+            graph.get(src).add(des);
         }
 
         return graph;
     }
 
-    public static void dfs(List<List<Edge>> graph, int src, int[] visited, Stack<Integer> stack){
+    public static void dfs(List<List<Integer>> graph, int src, int[] visited, Stack<Integer> stack){
         visited[src] = 1;
 
-        for(Edge e : graph.get(src)){
-            if(visited[e.des] == 0){
-                dfs(graph, e.des, visited, stack);
+        for(int des : graph.get(src)){
+            if(visited[des] == 0){
+                dfs(graph, des, visited, stack);
             }
         }
 
@@ -46,7 +35,7 @@ public class TopoSort_DFS {
         int n = 6;
         int[][] edges = {{3, 1}, {2, 3}, {4, 1}, {4, 0}, {5, 2}, {5, 0}};
 
-        List<List<Edge>> graph = createGraph(n, edges);
+        List<List<Integer>> graph = createGraph(n, edges);
 
         int[] visited = new int[n];
         Stack<Integer> stack = new Stack<>();
