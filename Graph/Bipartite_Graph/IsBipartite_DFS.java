@@ -1,5 +1,3 @@
-package Graph.Bipartite_Graph;
-
 import java.util.*;
 
 public class IsBipartite_DFS {

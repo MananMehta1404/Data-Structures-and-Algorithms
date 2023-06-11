@@ -1,5 +1,3 @@
-package Graph.Building_Graph;
-
 import java.util.*;
 
 // Creating a Graph using Adjcency List.

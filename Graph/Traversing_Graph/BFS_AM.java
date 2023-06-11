@@ -1,5 +1,3 @@
-package Graph.Traversing_Graph;
-
 import java.util.*;
 
 // BFS for connected graph using Adjacency Matrix.

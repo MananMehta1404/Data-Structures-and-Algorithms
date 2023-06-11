@@ -1,5 +1,3 @@
-package Hashing;
-
 import java.util.*;
 
 public class Hash_Map {

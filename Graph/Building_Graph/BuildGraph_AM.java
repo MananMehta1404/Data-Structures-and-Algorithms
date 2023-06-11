@@ -1,5 +1,3 @@
-package Graph.Building_Graph;
-
 // Creating a graph using Adjacency Matrix.
 public class BuildGraph_AM {
 

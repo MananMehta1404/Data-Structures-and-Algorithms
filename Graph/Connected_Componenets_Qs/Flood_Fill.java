@@ -1,5 +1,3 @@
-package Graph.Connected_Componenets_Qs;
-
 public class Flood_Fill {
 
     public static void dfs(int row, int col, int[][] ans, int[][] image, int iniColor, int color, int[] delRow, int[] delCol){

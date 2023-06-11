@@ -1,5 +1,3 @@
-package Graph.Traversing_Graph;
-
 import java.util.*;
 
 public class DFS_AM {

@@ -1,5 +1,3 @@
-package Graph.Connected_Componenets_Qs;
-
 // Time Complexity: O(n*m)
 // Space Complexity: O(n*m)
 public class Surrounded_Regions {

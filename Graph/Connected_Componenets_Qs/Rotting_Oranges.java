@@ -1,5 +1,3 @@
-package Graph.Connected_Componenets_Qs;
-
 import java.util.*;;
 
 public class Rotting_Oranges {

@@ -1,5 +1,3 @@
-package Hashing;
-
 import java.util.HashSet;
 import java.util.Iterator;
 
@@ -22,7 +20,7 @@ public class Hash_Set{
 
         // Displaying the HashSet using an iterator
         set.add(0);
-        Iterator it = set.iterator();
+        Iterator<Integer> it = set.iterator();
         while(it.hasNext()){
             System.out.println(it.next());
         }

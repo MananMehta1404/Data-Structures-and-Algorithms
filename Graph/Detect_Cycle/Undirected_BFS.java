@@ -1,5 +1,3 @@
-package Graph.Detect_Cycle;
-
 import java.util.*;
 
 public class Undirected_BFS {

@@ -2,8 +2,6 @@
 // A move consists of walking from one land square (4-directionally) to another land square, or off the boundary of the grid.
 // Return the number of land squares in the grid for which we cannot walk off the boundary of the grid in any number of moves.
 
-package Graph.Connected_Componenets_Qs;
-
 import java.util.*;
 
 // Time Complexity: O(n*m)
