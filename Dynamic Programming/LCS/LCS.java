@@ -1,3 +1,4 @@
+package LCS;
 public class LCS {
 
     // Memoization Approach

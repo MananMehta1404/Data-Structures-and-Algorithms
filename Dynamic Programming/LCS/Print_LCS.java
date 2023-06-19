@@ -1,3 +1,4 @@
+package LCS;
 public class Print_LCS {
     public static void main(String[] args) {
         String s1 = "AGGTAB";
