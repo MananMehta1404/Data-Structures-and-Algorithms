@@ -1,4 +1,3 @@
-package LCS;
 public class MinInsertions_To_MakeStringPalindrome {
 
     public static int lcs(String s, String t) {

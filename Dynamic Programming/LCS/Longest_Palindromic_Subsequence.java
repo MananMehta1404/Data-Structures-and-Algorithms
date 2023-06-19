@@ -1,4 +1,3 @@
-package LCS;
 public class Longest_Palindromic_Subsequence {
 
     public static int lcs(String s, String t) {

@@ -1,4 +1,3 @@
-package LCS;
 public class MinStepsToConvert_StringA_To_StringB {
 
     public static int lcs(String s, String t) {
