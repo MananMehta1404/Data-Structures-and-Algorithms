@@ -1,5 +1,3 @@
-package Dynamic_Programming.Fibonacci_Number;
-
 // Space Optimized Method
 public class Method_III {
 

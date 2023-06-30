@@ -1,5 +1,3 @@
-package Recursion.Advanced_Level_Questions;
-
 public class PlaceTheTiles {
     public static int placeTiles(int n, int m){
         if(n < m) return 1;

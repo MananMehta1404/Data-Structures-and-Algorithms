@@ -1,5 +1,3 @@
-package Dynamic_Programming.Buy_And_Sell_Stocks;
-
 public class BuyAndSellStock_With_CoolDown {
     // Memoization Code  
     public static int max_Profit(int[] prices, int idx, int buy, int[][] dp){

@@ -1,5 +1,3 @@
-package Dynamic_Programming.Fibonacci_Number;
-
 // Tabulation Method
 public class Method_II {
 

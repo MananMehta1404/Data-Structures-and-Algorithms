@@ -1,5 +1,3 @@
-package Recursion.Intermediate_Level_Questions;
-
 public class MoveXtoEnd {
 
     // Time Complexity -> O(n)

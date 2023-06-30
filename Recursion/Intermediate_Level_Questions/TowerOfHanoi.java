@@ -1,5 +1,3 @@
-package Recursion.Intermediate_Level_Questions;
-
 public class TowerOfHanoi {
     
     public static void towerOfHanoi(int n, String source, String helper, String destination){

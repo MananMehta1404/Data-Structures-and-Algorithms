@@ -1,5 +1,3 @@
-package Recursion.Intermediate_Level_Questions;
-
 public class RemoveDuplicates {
     public static boolean[] map = new boolean[26];
 

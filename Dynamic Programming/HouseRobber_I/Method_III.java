@@ -1,5 +1,3 @@
-package Dynamic_Programming.HouseRobber_I;
-
 public class Method_III {
     // Space Optimization Method
     public static void main(String[] args) {

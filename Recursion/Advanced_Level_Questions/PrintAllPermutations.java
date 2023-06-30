@@ -1,5 +1,3 @@
-package Recursion.Advanced_Level_Questions;
-
 public class PrintAllPermutations{
 
     // Time Complexity -> O(n * n!)

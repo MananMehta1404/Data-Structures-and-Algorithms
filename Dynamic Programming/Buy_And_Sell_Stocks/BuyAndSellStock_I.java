@@ -1,5 +1,3 @@
-package Dynamic_Programming.Buy_And_Sell_Stocks;
-
 public class BuyAndSellStock_I {
 
     // Time Complexity -> O(N) where N is the length of the array.

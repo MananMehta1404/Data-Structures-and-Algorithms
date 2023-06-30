@@ -1,5 +1,3 @@
-package Recursion.Backtracking;
-
 public class SudokuSolver{
 
     public static boolean isSafe(char[][] board, int row, int col, int num){

@@ -1,5 +1,3 @@
-package Recursion.Intermediate_Level_Questions;
-
 public class ReverseString {
     // Time Complextiy -> O(n)
     public static void printReverseString(String str, int idx){

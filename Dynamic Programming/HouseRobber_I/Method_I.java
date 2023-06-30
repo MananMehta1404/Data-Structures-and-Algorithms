@@ -1,5 +1,3 @@
-package Dynamic_Programming.HouseRobber_I;
-
 public class Method_I {
     // Memoization Method
     public static int rob(int[] nums, int idx, int[] dp) {

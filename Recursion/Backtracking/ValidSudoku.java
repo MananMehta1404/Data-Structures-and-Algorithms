@@ -1,5 +1,3 @@
-package Recursion.Backtracking;
-
 public class ValidSudoku {
 
     public static boolean isSafe(char[][] board, int row, int col){

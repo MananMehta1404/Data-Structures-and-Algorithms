@@ -1,5 +1,3 @@
-package Recursion.Backtracking;
-
 import java.util.*;;
 
 public class N_Queens {

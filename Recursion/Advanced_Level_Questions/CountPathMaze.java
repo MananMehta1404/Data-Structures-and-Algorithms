@@ -1,5 +1,3 @@
-package Recursion.Advanced_Level_Questions;
-
 public class CountPathMaze {
 
     // Time Complexity -> O(2^(x+y))

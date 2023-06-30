@@ -1,5 +1,3 @@
-package Recursion.Intermediate_Level_Questions;
-
 public class PrintAllSubsequences {
 
     // Time Complexity -> O(2^n)

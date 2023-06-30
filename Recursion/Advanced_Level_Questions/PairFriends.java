@@ -1,5 +1,3 @@
-package Recursion.Advanced_Level_Questions;
-
 public class PairFriends {
     public static int pairFriends(int n){
         if(n <= 1) return 1;

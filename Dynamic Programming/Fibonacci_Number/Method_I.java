@@ -1,5 +1,3 @@
-package Dynamic_Programming.Fibonacci_Number;
-
 // Memoization Method
 public class Method_I {
     // Time Complexity -> O(N) -> The overlapping subproblems will return the answer in constant time O(1). Therefore the total number of new subproblems we solve is ‘n’. Hence total time complexity is O(N).
