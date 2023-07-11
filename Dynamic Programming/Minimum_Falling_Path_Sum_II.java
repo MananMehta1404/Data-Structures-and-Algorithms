@@ -1,6 +1,8 @@
 import java.util.Arrays;
 
 public class Minimum_Falling_Path_Sum_II {
+
+    // Memoization Approach
     public static int findMinPathSum(int row, int col, int[][] arr, int n, int m, int[][] dp) {
         if(row == n - 1) return arr[row][col];
 
@@ -27,12 +29,33 @@ public class Minimum_Falling_Path_Sum_II {
             Arrays.fill(dp[i], -1);
         }
 
-        int minSum = Integer.MAX_VALUE;
-        for(int i = 0; i < m; i++) {
-            int sum = findMinPathSum(0, i, arr, n, m, dp);
-            System.out.println("Sum for column " + i + " is: " + sum);
+        // Memoization Approach
+        // int minSum = Integer.MAX_VALUE;
+        // for(int i = 0; i < m; i++) {
+        //     int sum = findMinPathSum(0, i, arr, n, m, dp);
+        //     System.out.println("Sum for column " + i + " is: " + sum);
 
-            if(minSum > sum) minSum = sum;
+        //     if(minSum > sum) minSum = sum;
+        // }
+
+        // Tabulation Approach
+        for(int j = 0; j < n; j++) dp[n - 1][j] = arr[n - 1][j];
+
+        for(int i = n - 2; i >= 0; i--) {
+            for(int j = 0; j < n; j++) {
+                int minVal = (int)(1e9);
+                for(int k = 0; k < n; k++) {
+                    if(k == j) continue;
+                    minVal = Math.min(minVal, dp[i + 1][k]);
+                }
+                
+                dp[i][j] = arr[i][j] + minVal;
+            }
+        }
+
+        int minSum = (int)(1e9);
+        for(int j = 0; j < n; j++) {
+            if(minSum > dp[0][j]) minSum = dp[0][j];
         }
 
         System.out.println("Minimum sum is: " + minSum);
