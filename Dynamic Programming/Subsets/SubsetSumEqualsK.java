@@ -1,4 +1,4 @@
-import java.util.Arrays;
+// import java.util.Arrays;
 
 public class SubsetSumEqualsK {
 
@@ -28,9 +28,28 @@ public class SubsetSumEqualsK {
 
         int n = arr.length;
 
-        int[][] dp = new int[n][target + 1];
-        for(int[] row: dp) Arrays.fill(row, -1);
+        // int[][] dp = new int[n][target + 1];
+        // for(int[] row: dp) Arrays.fill(row, -1);
 
-        System.out.println(isSubsetSum(arr, n - 1, target, dp));
+        // System.out.println(isSubsetSum(arr, n - 1, target, dp));
+
+        // Tabulation Approach
+        boolean[][] dp = new boolean[n][target + 1];
+
+        // Base Cases
+        for(int i = 0; i < n; i++) dp[i][0] = true;
+        dp[0][arr[0]] = true;
+
+        for(int i = 1; i < n; i++) {
+            for(int tar = 1; tar <= target; tar++) {
+                boolean notTake = dp[i - 1][tar];
+                boolean take = false;
+                if(tar >= arr[i]) take = dp[i - 1][tar - arr[i]];
+
+                dp[i][tar] = notTake || take;
+            }
+        }
+
+        System.out.println(dp[n - 1][target]);
     }
 }
